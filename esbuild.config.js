@@ -3,13 +3,13 @@ const fg = require('fast-glob');
 
 const mode = process.argv[2] || "build";
 
-const entryPoints = fg.sync("root/**/*.ts");
+const entryPoints = fg.sync("docs/**/*.ts");
 console.log("entryPoints", entryPoints.join(", "))
 
 const buildOptions = {
     entryPoints: entryPoints,
-    outdir: "root",
-    outbase: "root",
+    outdir: "docs",
+    outbase: "docs",
     sourcemap: mode != "build",
     bundle: true,
     define: {
@@ -35,7 +35,7 @@ if(mode == "watch") {
 }
 
 const serveOptions = {
-    servedir: "root"
+    servedir: "docs"
 }
 
 function error(reason) {
