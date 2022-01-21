@@ -1,0 +1,3 @@
+[submodule "IPartT/dist"]
+	path = IPartT/dist
+	url = https://github.com/eyeree/IParTDist

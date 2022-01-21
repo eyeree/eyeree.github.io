@@ -1,0 +1,24 @@
+{
+  "name": "eyeree.art",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eyeree/eyeree.github.io.git"
+  },
+  "author": "Mike Deem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eyeree/eyeree.github.io/issues"
+  },
+  "homepage": "https://github.com/eyeree/eyeree.github.io#readme",
+  "dependencies": {
+    "esbuild": "^0.14.12",
+    "fast-glob": "^3.2.11",
+    "typescript": "^4.5.5"
+  }
+}
