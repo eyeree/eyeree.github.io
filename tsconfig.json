@@ -1,10 +1,11 @@
 {
     "compilerOptions": {
         "outDir": ".tsc",
+        "rootDir": "./root",
         "strict": true,
         "target": "ES6",
         "module": "CommonJS",
         "lib": ["DOM", "ES2019"]   
     },
-    "include": ["root/**/*.ts"]
+    "include": ["./root/**/*.ts"]
 }

@@ -9,6 +9,7 @@ console.log("entryPoints", entryPoints.join(", "))
 const buildOptions = {
     entryPoints: entryPoints,
     outdir: "root",
+    outbase: "root",
     sourcemap: mode != "build",
     bundle: true,
     define: {
