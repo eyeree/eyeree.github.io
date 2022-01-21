@@ -39,7 +39,7 @@ window.onload = () => {
         toToken.innerText = (firstTokenId + f.length - 1).toString();
         gotoToken.value = firstTokenId.toString();
         for(let i = 0; i < f.length; ++i) {
-            f[i].setAttribute('src', `index.html#${firstTokenId + i}`);
+            f[i].setAttribute('src', `./IParTDist/index.html#${firstTokenId + i}`);
         }
         document.location.hash = fromTokenId.toString();
     }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>IParT Info</title>
-    <script type="module" src="./dist/frames.js"></script>
+    <script type="module" src="./index.js"></script>
     <style>
         body { 
             background-color: dimgrey; 
@@ -11,23 +11,40 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             height: 100vh;
             margin: 0;
+            font-family: sans-serif;
         }
         iframe {
             height: 500px;
             width: 508px;
             margin: 3px;
         }
-        .row {
+        .frame {
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        .frame > h2 {
+          margin-bottom:0;
+        }
+        .description {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 500px;
+        }
+        .description > h1 { 
+          margin-bottom:0;          
         }
         .controls {
           margin: 4px;
           align-items: center;
           justify-content: center;
+          display: flex;
+          flex-direction: row;
         }
         .controls > span {
           margin-left: 10px;
@@ -44,17 +61,42 @@
           padding: 2px 6px;
           cursor: pointer;
         }
+        #goto_token {
+          width: 30px;
+          text-align: right;
+        }
+        a {
+          color: black;
+        }
+        .subtitle {
+          font-size:larger;
+          font-weight: bolder;
+        }
     </style>
   </head>
   <body>
-    <div class="row">
+    <div class="description">
+      <h1>IParT</h1>
+      <div class='subtitle'>Interactive Particle Tokens</div>
+      <p>
+        Each token is an unique world with its own combination of particle appearance and behavior. 
+        The worlds are deterministic, playing out the same every time, unless you interact with them
+        (touch or click and drag). 
+      </p>
+      <p>
+        IParT is implemented using HTML canvas elements and leverages <code>animation_url</code> 
+        token metadata with html content <a href="https://docs.opensea.io/docs/metadata-standards#metadata-structure">as supported by OpenSea</a>.
+      </p>
+    </div>
+    <div class="frame">
+      <h2>IParT #<span id="token_id"></span></h2>
       <iframe id="f1" allowfullscreen="" frameborder="0" height="500" width="508" sandbox="allow-scripts"></iframe>
     </div>
-    <div class="row controls">
-      <span><span>Showing Tokens</span><span id="from_token"></span><span>to</span><span id="to_token"></span></span>
-      <span id="prev_page" class="button">Prev Page</span>
-      <span id="next_page" class="button">Next Page</span>
+    <div class="controls">
+      <span id="prev" class="button">Prev</span>
+      <span id="next" class="button">Next</span>
       <span><span id="goto" class="button">Goto:</span><input type=text id="goto_token"/></span>
+      <span>(<a href="./explorer.html">explore more at a time)</a></span>
     </div>
   </body>
 </html>
