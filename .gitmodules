@@ -1,0 +1,3 @@
+[submodule "docs/IParT/IParTDist"]
+	path = docs/IParT/IParTDist
+	url = https://github.com/eyeree/IParTDist
