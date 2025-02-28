@@ -1,2 +1,13 @@
 node_modules/
 .tsc/
+_site
+.DS_Store
+.jekyll
+.jekyll-metadata
+.bundle
+.sass-cache
+Gemfile.lock
+*.gem
+*.gemspec
+.jekyll-cache
+vendor
