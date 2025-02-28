@@ -96,7 +96,6 @@ exclude:
   - Gemfile.lock
   - LICENSE
   - README.md
-  - CNAME
   - "*.ts"
   - esbuild.config.js
   - package-lock.json
